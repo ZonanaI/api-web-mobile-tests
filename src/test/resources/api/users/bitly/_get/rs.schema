@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "created_at": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "custom_bitlinks": {
+      "type": "array",
+      "items": {}
+    },
+    "long_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "archived": {
+      "type": "boolean"
+    },
+    "created_by": {
+      "type": "string"
+    },
+    "client_id": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {}
+    },
+    "deeplinks": {
+      "type": "array",
+      "items": {}
+    },
+    "references": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "group"
+      ]
+    }
+  },
+  "required": [
+    "created_at",
+    "id",
+    "link",
+    "custom_bitlinks",
+    "long_url",
+    "title",
+    "archived",
+    "created_by",
+    "client_id",
+    "tags",
+    "deeplinks",
+    "references"
+  ]
+}

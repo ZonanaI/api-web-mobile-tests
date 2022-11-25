@@ -1,0 +1,5 @@
+{
+    <#if long_url??>"long_url": "${long_url}",</#if>
+    <#if domain??>"domain": "${domain}",</#if>
+    <#if group_guid??>"group_guid": "${group_guid}"</#if>
+}
