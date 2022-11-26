@@ -1,26 +1,28 @@
 {
-  "0": {
-    "id": 1,
-    <#if name??>"name": "${name}",</#if>
-    <#if username??>"username": "${username}",</#if>
-    "email": "Sincere@april.biz",
-    "address": {
-      "street": "Kulas Light",
-      "suite": "Apt. 556",
-      "city": "Gwenborough",
-      "zipcode": "92998-3874",
-      "geo": {
-        "lat": "-37.3159",
-        "lng": "81.1496"
-      }
-    },
-    "phone": "1-770-736-8031 x56442",
-    "website": "hildegard.org",
-    "company": {
-      "name": "${company_name}",
-      "catchPhrase": "Multi-layered client-server neural-net",
-      "bs": "harness real-time e-markets"
+  "references": { "any" },
+  "link": "string",
+  "id": "string",
+  "long_url": "string",
+  "archived": "boolean",
+  "created_at": "string",
+  "custom_bitlinks": [
+    "string"
+  ],
+  "tags": [
+    "string"
+  ],
+  "deeplinks": [
+    {
+      "guid": "string",
+      "bitlink": "string",
+      "app_uri_path": "string",
+      "install_url": "string",
+      "app_guid": "string",
+      "os": "string",
+      "install_type": "string",
+      "created": "string",
+      "modified": "string",
+      "brand_guid": "string"
     }
-  },
-    "id": 11
+  ]
 }

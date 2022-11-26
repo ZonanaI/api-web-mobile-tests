@@ -1,4 +1,4 @@
-package com.solvd.carina.demo.api.bitly;
+package com.solvd.carina.demo.api.bitly.methods;
 
 import com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2;
 import com.qaprosoft.carina.core.foundation.api.annotation.Endpoint;
@@ -9,19 +9,15 @@ import com.qaprosoft.carina.core.foundation.api.http.HttpMethodType;
 import com.qaprosoft.carina.core.foundation.api.http.HttpResponseStatusType;
 import com.qaprosoft.carina.core.foundation.utils.Configuration;
 
-@Endpoint(url = "${base_url}/v4/bitlinks/${bitly-link}", methodType = HttpMethodType.DELETE)
-@RequestTemplatePath(path = "api/users/bitly/_delete/rq.json")
-@ResponseTemplatePath(path = "api/users/bitly/_delete/rs.json")
-@SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-public class DeleteLinkMethod extends AbstractApiMethodV2 {
+@Endpoint(url = "${base_url}/v4/shorten", methodType = HttpMethodType.POST)
+@RequestTemplatePath(path = "api/users/bitly/_post/rq.json")
+//@ResponseTemplatePath(path = "api/users/bitly/_post/rs.json")
+@SuccessfulHttpStatus(status = HttpResponseStatusType.CREATED_201)
 
-    public static final String bitlyLink= "bit.ly/3ESIPev";
-
-    public DeleteLinkMethod() {
-        super();
+public class PostLinkMethod extends AbstractApiMethodV2 {
+    public PostLinkMethod() {
         replaceUrlPlaceholder("base_url", Configuration.getEnvArg("api_url"));
-        replaceUrlPlaceholder("bitly-link", Configuration.getEnvArg("bitly-link"));
         String authorization = String.format("Authorization= Bearer %s",Configuration.getEnvArg("access_token"));
-        setHeaders(authorization);
+        setHeaders(authorization,"Content-Type=application/json");
     }
 }
